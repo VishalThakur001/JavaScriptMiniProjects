@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #027BCE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 30vw;
+    height: 100vh;
+    background-color: #4bb3fd;
+    border: 0.01rem solid black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.header form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#searchBar{
+    width: 80%;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+#searchIcon{
+    border-radius: 100%;
+    border: none;
+    height: 3rem;
+    padding: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+#searchBar:hover{
+    border: 0.1rem solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#searchIcon:hover{
+    border: 0.1rem solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.tempBox{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.humid img{ 
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0.5rem;
+}
+
+.windi i{
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.humidityContainer{
+    display: flex;
+}
+
+#showHumidity{
+    margin: 0.48rem 0 0 0.1rem;
+    font-size: 1.2rem;
+}
+
+.windContainer{
+    display: flex;
+}
+
+#showWindSpeed{
+    margin: 0.48rem 0 0 0.2rem;
+    font-size: 1.1rem;
+}
+
+#temperatur{
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+#location{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.tempIcon img{
+    width: 5rem;
+    height: 5rem;
+}
+
+#errorBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    display: none;
+}

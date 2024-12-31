@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=\, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .container{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .clock{
+                width: 300px;
+                height: 100px;
+                background-color: rgb(253, 186, 62);
+                border: 2px solid black;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Your local time: </h2>
+            <div class="clock"></div>
+        </div>
+    </body>
+    <script>
+        const clock = document.querySelector('.clock');
+
+        setInterval(function(){
+            let date = new Date();
+            clock.innerHTML = date.toLocaleTimeString();
+        }, 1000)
+    </script>
+</html>

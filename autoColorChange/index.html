@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        body{
+            background-color: #212121;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+        }
+        .btn{
+            padding: 5px;
+            width: 50px;
+            font-weight: 700;
+            border-radius: 10px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="box"></div>
+            <button class="btn" id="start">Start</button>
+            <button class="btn" id="stop">Stop</button>
+        </div>
+    </body>
+    <script>
+        const box = document.querySelector('.box');
+        const start = document.querySelector('#start');
+        const stop = document.querySelector('#stop');
+
+        function setColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            box.style.backgroundColor = color;
+        }
+        let stopChange;
+        start.addEventListener('click', function(e){
+            e.preventDefault();
+            if(!stopChange){
+                stopChange = setInterval(setColor, 2000);
+            }
+        })
+
+        stop.addEventListener('click', function(e){
+            e.preventDefault();
+            clearInterval(stopChange);
+            stopChange = null;
+        })
+    </script>
+</html>
